@@ -10,12 +10,23 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
         <div class="container">
             <a class="navbar-brand" href="{{ route('admin.index') }}">EMI Admin</a>
-            <div>
+
+            <div class="d-flex align-items-center gap-3">
+                {{-- Welcome username --}}
+                @auth
+                    <span class="text-muted">
+                        Welcome, <strong>{{ Auth::user()->name }}</strong>
+                    </span>
+                @endauth
+
+                {{-- Logout button --}}
                 <a class="btn btn-outline-secondary" href="{{ route('logout') }}"
                    onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     Logout
                 </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             </div>
         </div>
     </nav>
