@@ -72,7 +72,7 @@ php artisan serve
 Edit `.env` and set DB credentials and other environment variables. Example minimal settings:
 
 ```
-APP_NAME="EMI Processing"
+APP_NAME="EMI-Processing"
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true
