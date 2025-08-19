@@ -61,7 +61,9 @@ npm run dev
 php artisan migrate --seed
 
 # 7. Serve locally
-php artisan serve
+composer run dev
+or
+(npm run dev and php artisan serve in different command lines)
 # App will be available at http://127.0.0.1:8000
 ```
 
